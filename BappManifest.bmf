@@ -3,10 +3,10 @@ ExtensionType: 1
 Name: Blazor Traffic Processor
 RepoName: blazor-traffic-processor
 ScreenVersion: 1.0
-SerialVersion: 1
+SerialVersion: 2
 MinPlatformVersion: 7
 ProOnly: False
-Author: Aon's Cyber Labs
+Author: Will Rabb, Aon's Cyber Labs
 ShortDescription: Aids pentesting web applications that use Blazor Server/BlazorPack.
 EntryPoint: build/libs/BlazorTrafficProcessor-1.0.jar
 BuildCommand: ./gradlew jar
