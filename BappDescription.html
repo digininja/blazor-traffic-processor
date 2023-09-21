@@ -1,0 +1,26 @@
+<p>A BurpSuite extension to aid pentesting web applications that use Blazor Server/BlazorPack. Primary functionality includes converting BlazorPack messages to JSON and vice versa, introduces tamperability for BlazorPack serialized messages.</p>
+
+<p>Usage</p>
+<ul>
+	<li>All BlazorPack-enabled requests or responses will be highlighted as Cyan within the "HTTP History" tab in Burpsuite.</li>
+	<li>The "BTP" request/response editor tab, which appears on each in-scope request or response that contains BlazorPack messages.
+		<ul>
+			<li>Clicking on this tab will convert the serialized data from BlazorPack to JSON.</li>
+			<li>After editing the JSON (either in Intercept or Repeater), click the "Raw" tab to re-serialize with your payloads</li>
+		</ul>
+	</li>
+	<li>The "BTP" Burpsuite tab, which allows for ad-hoc conversions of Blazor-&gt;JSON and JSON-&gt;Blazor
+		<ul>
+			<li>The left-hand editor is for your input (JSON or raw Blazor)</li>
+			<li>The right-hand editor is for the results of the conversion</li>
+			<li>A drop-down menu on the bottom of the window lets you select "Blazor-&gt;JSON" or "JSON-&gt;Blazor"</li>
+			<li>The Serialize/Deserialize button at the top is how you trigger the conversion</li>
+		</ul>
+	</li>
+	<li>Right-click menu option called "Send body to BTP tab"
+		<ul>
+			<li>You can right-click any request or response and select "Extensions" -&gt; "BlazorTrafficProcessor" -&gt; "Send body to BTP tab"</li>
+			<li>This sends either the selected request or response body to the BTP tab, so you don't have to worry about copying/pasting raw bytes</li>
+		</ul>
+	</li>
+</ul>

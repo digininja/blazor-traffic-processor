@@ -1,0 +1,13 @@
+Uuid: 8a87b0d9654944ccbdf6ae8bdd18e1d4
+ExtensionType: 1
+Name: Blazor Traffic Processor
+RepoName: blazor-traffic-processor
+ScreenVersion: 1.0
+SerialVersion: 1
+MinPlatformVersion: 7
+ProOnly: False
+Author: Aon's Cyber Labs
+ShortDescription: Aids pentesting web applications that use Blazor Server/BlazorPack.
+EntryPoint: build/libs/BlazorTrafficProcessor-1.0.jar
+BuildCommand: ./gradlew jar
+SupportedProducts: Pro, Community
