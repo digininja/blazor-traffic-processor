@@ -49,7 +49,11 @@ public class BTPHttpRequestHandler implements ProxyRequestHandler {
     @Override
     public ProxyRequestReceivedAction handleRequestReceived(InterceptedRequest interceptedRequest) {
         if (interceptedRequest.body().length() != 0 && interceptedRequest.path().contains("_blazor?id")) {
-            interceptedRequest.annotations().setHighlightColor(HighlightColor.CYAN);
+            if (interceptedRequest.bodyToString().contains("BeginInvokeDotNetFromJS")) {
+                interceptedRequest.annotations().setHighlightColor(HighlightColor.RED);
+            } else {
+                interceptedRequest.annotations().setHighlightColor(HighlightColor.CYAN);
+            }
         }
         return ProxyRequestReceivedAction.continueWith(interceptedRequest);
     }
