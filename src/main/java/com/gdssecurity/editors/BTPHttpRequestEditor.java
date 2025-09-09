@@ -119,7 +119,8 @@ public class BTPHttpRequestEditor implements ExtensionProvidedHttpRequestEditor 
         }
         HttpRequest newReq = this.reqResp.request().withBody(ByteArray.byteArray(outstream.toByteArray()));
         this.reqResp = HttpRequestResponse.httpRequestResponse(newReq, this.reqResp.response());
-        this.editor.setContents(this.reqResp.request().toByteArray());
+        this.editor.setContents (ByteArray.byteArray(outstream.toByteArray()));
+    //    this.editor.setContents(this.reqResp.request().toByteArray());
     }
 
     /**
