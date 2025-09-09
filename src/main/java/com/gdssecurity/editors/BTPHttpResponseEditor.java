@@ -105,9 +105,11 @@ public class BTPHttpResponseEditor implements ExtensionProvidedHttpResponseEdito
         if (requestResponse.response().httpVersion() == null) {
             return false;
         }
+        /*
         if (this._montoya.scope() == null) {
             return false;
         }
+        */
         if (requestResponse.response().httpVersion() == null) {
             return false;
         }
